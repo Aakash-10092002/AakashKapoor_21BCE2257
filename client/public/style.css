@@ -1,0 +1,72 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+h1 {
+    color: #ecf0f1;
+    margin: 20px 0;
+    font-size: 2.5rem;
+}
+
+#turn-display {
+    font-size: 1.2rem;
+    margin: 15px;
+    color: #ecdbba;
+    font-weight: 600;
+}
+
+#game-board {
+    margin: 20px auto;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ecf0f1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2px;
+    background-color: #34495e;
+}
+
+/* Cell Styles */
+.cell {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ecf0f1;
+    background-color: #95a5a6;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+}
+
+/* Player A Pieces */
+.cell[data-player='A'] {
+    background-color: #3498db;
+    color: #ecf0f1;
+}
+
+/* Player B Pieces */
+.cell[data-player='B'] {
+    background-color: #e74c3c;
+    color: #ecf0f1;
+}
+
+/* Selected Cell */
+.selected {
+    outline: 3px solid #f1c40f;
+    background-color: #34495e;
+}
